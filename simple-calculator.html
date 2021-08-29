@@ -13,15 +13,9 @@
        box-shadow:2px 2px 2px black;
        text-align:right;
      }
-    table{
-       margin-left:25%;
-       height:42px;
-       width:50%;
-       border-color:black;
-       border-width:2px;
-       border-radius:10px;
+    output{
+       margin-left:50%;
        font-size:28px;
-       box-shadow:2px 2px 2px black;
        text-align:right;
        }   
      fieldset{
@@ -44,14 +38,13 @@
    <input type="number" class="a" id="input2"> 
    <br> 
    <br> 
-   <table border="1" id="demo"> 
-   </table> 
+   <output id="demo"></output>
    <br> 
    <div> 
     <input type="button" id="add" onclick="add();" value="+"> &nbsp;&nbsp; 
-    <input type="button" id="sub" onclick="subtract();" value="-"> &nbsp;&nbsp; 
-    <input type="button" id="mul" onclick="multiply();" value="x"> &nbsp;&nbsp; 
-    <input type="button" id="div" onclick="divide();" value="/"> 
+    <input type="button" id="sub" onclick="sub();" value="-"> &nbsp;&nbsp; 
+    <input type="button" id="mul" onclick="mul();" value="x"> &nbsp;&nbsp; 
+    <input type="button" id="div" onclick="div();" value="/"> 
     <br> 
    </div> 
    <br> 
@@ -64,21 +57,21 @@
    document.getElementById("demo").innerHTML= sum;
    document.getElementById("add").style.backgroundColor="orange";
    }
-   function subtract(){
+   function sub(){ 
    var a=document.getElementById("input1").value;
-   var b=document.getElementById("input2").value;  
+   var b=document.getElementById("input2").value; 
    var sub=a-b;
    document.getElementById("demo").innerHTML= sub;
    document.getElementById("sub").style.backgroundColor="orange"
    }
-   function multiply(){
+   function mul(){
    var a=document.getElementById("input1").value;
-   var b=document.getElementById("input2").value;  
+   var b=document.getElementById("input2").value;
    var product=a*b;
    document.getElementById("demo").innerHTML= product;
    document.getElementById("mul").style.backgroundColor="orange"
    }
-   function divide(){
+  function div(){
    var a=document.getElementById("input1").value;
    var b=document.getElementById("input2").value;
    var div=a/b;
