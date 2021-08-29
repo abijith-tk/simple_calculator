@@ -1,0 +1,86 @@
+<!doctype html><html><head> 
+  <title>calculator</title> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <style>
+    .a{
+       height:28px;
+       font-size:18px;
+       width:30%; 
+       border-radius:5px; 
+       box-shadow:2px 2px 2px black;
+       text-align:right;
+     }
+    table{
+       margin-left:25%;
+       height:42px;
+       width:50%;
+       border-color:black;
+       border-width:2px;
+       border-radius:10px;
+       font-size:28px;
+       box-shadow:2px 2px 2px black;
+       text-align:right;
+       }   
+     fieldset{
+       margin-top:25%;
+       margin-left:5%;
+       border-color:red;
+       border-radius:20px;
+       width:80%;
+       }
+     div{
+       text-align:center;
+      }
+  </style> 
+ </head> 
+ <body> 
+  <fieldset> 
+   <br> Number: 
+   <input type="number" class="a" id="input1"> 
+   <input type="number" class="a" id="input2"> 
+   <br> 
+   <br> 
+   <table border="1" id="demo">  
+   </table> 
+   <br> 
+   <div> 
+    <input type="button" id="add" onclick="add();" value="+"> &nbsp;&nbsp; 
+    <input type="button" id="sub" onclick="subtract();" value="-"> &nbsp;&nbsp; 
+    <input type="button" id="mul" onclick="multiply();" value="x"> &nbsp;&nbsp; 
+    <input type="button" id="div" onclick="divide();" value="/"> 
+    <br> 
+   </div> 
+   <br> 
+  </fieldset> 
+  <script>
+   function add(){
+   var a=document.getElementById("input1").value;
+   var b=document.getElementById("input2").value;
+   var sum=Number(a)+Number(b);
+   document.getElementById("demo").innerHTML= sum;
+   document.getElementById("add").style.backgroundColor="orange";
+   }
+   function subtract(){
+   var a=document.getElementById("input1").value;
+   var b=document.getElementById("input2").value;  
+   var sub=a-b;
+   document.getElementById("demo").innerHTML= sub;
+   document.getElementById("sub").style.backgroundColor="orange"
+   }
+   function multiply(){
+   var a=document.getElementById("input1").value;
+   var b=document.getElementById("input2").value;  
+   var product=a*b;
+   document.getElementById("demo").innerHTML= product;
+   document.getElementById("mul").style.backgroundColor="orange"
+   }
+   function divide(){
+   var a=document.getElementById("input1").value;
+   var b=document.getElementById("input2").value;
+   var div=a/b;
+   document.getElementById("demo").innerHTML= div;
+   document.getElementById("div").style.backgroundColor="orange"
+   }
+  </script> 
+ 
+</body></html>
