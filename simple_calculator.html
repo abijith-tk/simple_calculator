@@ -1,0 +1,94 @@
+<!doctype html><html><head> 
+  <title>calculator</title> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <style>
+    body{
+      text-align:center;
+     }
+    .a{
+       height:28px;
+       font-size:18px;
+       width:30%; 
+       border-radius:5px; 
+       box-shadow:2px 2px 2px black;
+       text-align:right;
+     }
+     fieldset{
+       margin-top:5%;
+       margin-left:5%;
+       border-color:red;
+       border-radius:20px;
+       width:80%;
+       }
+     div{
+       text-align:center;
+      }
+     span{
+       font-size:18px;
+       }
+    .output{
+      border-color:black;
+      text-align:center;
+      font-size:16px;
+      height:20px;
+      width:50%;
+      margin-left:20%;
+      border-radius:4px;
+      border-width:2px;
+      box-shadow:2px 2px 2px black;
+      }
+  </style> 
+ </head> 
+ <body> 
+  <fieldset> 
+   <br> 
+   <input type="number" class="a" id="input1"> &nbsp;&nbsp; 
+   <span id="symbol"></span>&nbsp;&nbsp; 
+   <input type="number" class="a" id="input2"> 
+   <br> 
+   <br> 
+   <fieldset class="output"> 
+    <output id="result"></output> 
+   </fieldset> 
+   <br> 
+   <div> 
+    <input type="button" id="add" onclick="add();" value="+"> &nbsp;&nbsp; 
+    <input type="button" id="sub" onclick="sub();" value="-"> &nbsp;&nbsp; 
+    <input type="button" id="mul" onclick="mul();" value="x"> &nbsp;&nbsp; 
+    <input type="button" id="div" onclick="div();" value="/"> 
+    <br> 
+   </div> 
+   <br> 
+  </fieldset> 
+  <script>
+   function add(){
+   var a=document.getElementById("input1").value;
+   var b=document.getElementById("input2").value;
+   var sum=Number(a)+Number(b);
+   document.getElementById("result").innerHTML= sum;
+   document.getElementById("symbol").innerHTML= "  +  ";
+   }
+   function sub(){ 
+   var a=document.getElementById("input1").value;
+   var b=document.getElementById("input2").value; 
+   var sub=a-b;
+   document.getElementById("result").innerHTML= sub;
+   document.getElementById("symbol").innerHTML= "  -  "
+   }
+   function mul(){
+   var a=document.getElementById("input1").value;
+   var b=document.getElementById("input2").value;
+   var product=a*b;
+   document.getElementById("result").innerHTML= product;
+   document.getElementById("symbol").innerHTML="  x  ";
+   }
+  function div(){
+   var a=document.getElementById("input1").value;
+   var b=document.getElementById("input2").value;
+   var div=a/b;
+   document.getElementById("result").innerHTML= div;
+   document.getElementById("symbol").innerHTML="  /  "
+   }
+  </script> 
+ 
+</body></html>
