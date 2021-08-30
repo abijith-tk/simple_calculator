@@ -40,17 +40,15 @@
   </style> 
  </head> 
  <body> 
-  <h1>Calculator</h1> 
-  <br> 
   <fieldset> 
    <br> 
-    <input type="number" class="a" id="input1"> 
-     &nbsp;&nbsp;  <span id="symbol"></span>&nbsp;&nbsp;
-    <input type="number" class="a" id="input2">
+   <input type="number" class="a" id="input1"> &nbsp;&nbsp; 
+   <span id="symbol"></span>&nbsp;&nbsp; 
+   <input type="number" class="a" id="input2"> 
    <br>
-   <br>
+   <br> 
    <fieldset class="output"> 
-    <output id="demo"></output> 
+    <output id="result"></output> 
    </fieldset> 
    <br> 
    <div> 
@@ -60,35 +58,35 @@
     <input type="button" id="div" onclick="div();" value="/"> 
     <br> 
    </div> 
-   <br><br>
+   <br> 
   </fieldset> 
   <script>
    function add(){
    var a=document.getElementById("input1").value;
    var b=document.getElementById("input2").value;
    var sum=Number(a)+Number(b);
-   document.getElementById("demo").innerHTML= sum;
+   document.getElementById("result").innerHTML= sum;
    document.getElementById("symbol").innerHTML= "  +  ";
    }
    function sub(){ 
    var a=document.getElementById("input1").value;
    var b=document.getElementById("input2").value; 
    var sub=a-b;
-   document.getElementById("demo").innerHTML= sub;
+   document.getElementById("result").innerHTML= sub;
    document.getElementById("symbol").innerHTML= "  -  "
    }
    function mul(){
    var a=document.getElementById("input1").value;
    var b=document.getElementById("input2").value;
    var product=a*b;
-   document.getElementById("demo").innerHTML= product;
+   document.getElementById("result").innerHTML= product;
    document.getElementById("symbol").innerHTML="  x  ";
    }
   function div(){
    var a=document.getElementById("input1").value;
    var b=document.getElementById("input2").value;
    var div=a/b;
-   document.getElementById("demo").innerHTML= div;
+   document.getElementById("result").innerHTML= div;
    document.getElementById("symbol").innerHTML="  /  "
    }
   </script> 
