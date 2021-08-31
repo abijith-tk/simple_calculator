@@ -1,18 +1,18 @@
-<!doctype html>
- <html>
-  <head> 
+<!doctype html><html><head>
   <title>calculator</title> 
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
   <style>
     body{
       text-align:center;
+      background-color:black;
      }
     .a{
        height:28px;
        font-size:18px;
+       font-weight:bolder;
        width:30%; 
        border-radius:5px; 
-       box-shadow:2px 2px 2px black;
+       box-shadow:2px 2px 2px red;
        text-align:right;
      }
      fieldset{
@@ -21,6 +21,7 @@
        border-color:red;
        border-radius:20px;
        width:80%;
+       background-color:hsl(0,0%,10%);
        }
      div{
        text-align:center;
@@ -37,11 +38,14 @@
       margin-left:20%;
       border-radius:4px;
       border-width:2px;
-      box-shadow:2px 2px 2px black;
+      box-shadow:2px 2px 2px red;
+      font-weight:bold;
+      background-color:white;
       }
   </style> 
  </head> 
  <body> 
+   <br><br>
   <fieldset> 
    <br> 
    <input type="number" class="a" id="input1"> &nbsp;&nbsp; 
@@ -68,14 +72,14 @@
    var b=document.getElementById("input2").value;
    var sum=Number(a)+Number(b);
    document.getElementById("result").innerHTML= sum;
-   document.getElementById("symbol").innerHTML= "<b> +</b>  ";
+   document.getElementById("symbol").innerHTML="<b> +</b>  ";
    }
    function sub(){ 
    var a=document.getElementById("input1").value;
    var b=document.getElementById("input2").value; 
    var sub=a-b;
    document.getElementById("result").innerHTML= sub;
-   document.getElementById("symbol").innerHTML= " <b>-</b>  "
+   document.getElementById("symbol").innerHTML=" <b>-</b>  "
    }
    function mul(){
    var a=document.getElementById("input1").value;
@@ -92,5 +96,5 @@
    document.getElementById("symbol").innerHTML="<b> /</b> "
    }
   </script> 
-</body>
-</html>
+ 
+</body></html>
