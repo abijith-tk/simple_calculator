@@ -15,6 +15,7 @@
        border-radius:5px; 
        box-shadow:2px 2px 2px red;
        text-align:center;
+       background-color:white;
      }
      fieldset{
        margin-top:5%;
@@ -44,6 +45,11 @@
       background-color:white;
       color:black;
       }
+     .button{
+        color:black;
+        background-color:orange;
+        
+     }
   </style> 
  </head> 
  <body> 
@@ -61,10 +67,10 @@
    </fieldset> 
    <br> 
    <div> 
-    <input type="button" id="add" onclick="add();" value="+"> &nbsp;&nbsp; 
-    <input type="button" id="sub" onclick="sub();" value="-"> &nbsp;&nbsp; 
-    <input type="button" id="mul" onclick="mul();" value="x"> &nbsp;&nbsp; 
-    <input type="button" id="div" onclick="div();" value="/"> 
+    <input type="button" class="button" id="add" onclick="add();"  value="+"> &nbsp;&nbsp; 
+    <input type="button" class="button" id="sub" onclick="sub();" value="-"> &nbsp;&nbsp; 
+    <input type="button" class="button" id="mul" onclick="mul();" value="x"> &nbsp;&nbsp; 
+    <input type="button" class="button" id="div" onclick="div();" value="/"> 
     <br> 
    </div> 
    <br> 
@@ -99,5 +105,4 @@
    document.getElementById("symbol").innerHTML="<b> /</b> "
    }
   </script> 
- 
 </body></html>
